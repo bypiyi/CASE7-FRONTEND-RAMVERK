@@ -1,0 +1,91 @@
+/* src/styles/navbar.css */
+
+/* Grundläggande stil för navbar */
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Sprider ut hamburgarmenyn och loggan */
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    position: fixed; /* Fixerar navbaren högst upp */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Se till att navbaren ligger över annat innehåll */
+  }
+  
+  /* Hamburgarmenyn */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ff9a00;
+    margin: 4px 0;
+  }
+  
+  /* Loggan */
+  .logo img {
+    width: 50px; /* Justera storleken efter behov */
+    height: auto;
+    margin-top: 1px;
+  }
+  
+  /* Navigeringslänkar */
+  .nav-links {
+    display: none; /* Gömmer länkarna som standard */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Anpassa beroende på navbarens höjd */
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 1rem 0;
+  }
+  
+  .nav-links.open {
+    display: flex; /* Visar länkarna när menyn är öppen */
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+  
+  .nav-links a:hover {
+    background-color: #444;
+  }
+  
+  /* Desktop-anpassning: När skärmen är bredare */
+  @media (min-width: 768px) {
+    .nav-links {
+      display: flex !important; /* Visar länkarna direkt på desktop */
+      flex-direction: row;
+      position: static;
+      background-color: transparent;
+      padding: 0;
+    }
+  
+    .nav-links a {
+      margin: 0 1rem;
+    }
+  
+    .hamburger {
+      display: none; /* Dölj hamburgarmenyn på desktop */
+    }
+  
+    .logo {
+      margin-left: auto; /* Se till att loggan är till höger */
+    }
+  }
+  
+  /* Lägg till padding till sidans innehåll för att inte bli överlagrat av navbaren */
+  body {
+    padding-top: 60px; /* Justera beroende på navbarens höjd */
+  }
+  

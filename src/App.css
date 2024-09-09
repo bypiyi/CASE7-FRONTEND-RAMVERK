@@ -1,0 +1,30 @@
+/* Nollställ marginal och padding för att undvika oväntade utrymmen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Grundläggande stil för att säkerställa att body tar upp hela sidan */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Stil för hero-bannern */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 100% av höjden på viewporten */
+  overflow: hidden; /* För att undvika att något innehåll sticker ut */
+}
+
+/* Förhindra att bilden sticker ut och säkerställ att den täcker både bredd och höjd */
+.hero-image {
+  width: 100vw; /* Begränsa bredden till 100% av viewportens bredd */
+  height: 100vh; /* Begränsa höjden till 100% av viewportens höjd */
+  object-fit: cover; /* Skalar bilden för att fylla containern utan att ändra proportioner */
+  display: block;
+}
