@@ -1,26 +1,32 @@
 // src/App.js
 import React from 'react';
-import Navbar from './components/NavBar';
-import './app.css'; // Din övergripande CSS
-import heroImage from './assets/movie_festival.png'; // Importera din hero-bild från assets
-
+import './app.css'; // Importera din CSS
+import heroImage from './assets/hero_banner.jpg';
+import logoImage from './assets/header_logo.png';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      {/* Huvudinnehåll */}
+      <header className="navbar">
+        <div className="logo">
+        <img src={logoImage} alt="Logo" className="logo-image" />
+        </div>
+        <nav className="nav-links">
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">MOVIES</a></li>
+            <li><a href="#services">SHOWS</a></li>
+            <li><a href="#contact">BOOKINGS</a></li>
+            <li><a href="#contact">ABOUT</a></li>
+          </ul>
+        </nav>
+      </header>
 
-      <div className="hero">
-        <img src={heroImage} alt="Hero Banner" className="hero-image" />
-      </div>
+      <section className="hero">
+        <img src={heroImage} alt="Hero" className="hero-image" />
+      </section>
 
-      <main>
-
-
-        {/* Exempel på innehåll */}
-
-      </main>
+      {/* Här kan du lägga till resten av ditt innehåll */}
     </div>
   );
 }
