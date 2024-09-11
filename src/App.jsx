@@ -23,7 +23,6 @@ function App() {
             <li><a href="#" onClick={() => handleNavigation('movies')}>MOVIES</a></li>
             <li><a href="#" onClick={() => handleNavigation('shows')}>SHOWS</a></li>
             <li><a href="#" onClick={() => handleNavigation('bookings')}>BOOKINGS</a></li>
-            <li><a href="#" onClick={() => handleNavigation('about')}>ABOUT</a></li>
           </ul>
         </nav>
       </header>
@@ -35,7 +34,10 @@ function App() {
         </div>
       )}
 
-      {currentPage === 'movies' && <Movies />} {/* Visar Movies-komponenten om sidan är 'movies' */}
+      {currentPage === 'movies' && <Movies />}
+      {currentPage === 'shows' && <Shows />}
+      {currentPage === 'bookings' && <Bookings />}
+      {currentPage === 'about' && <About />}
 
       {/* Du kan skapa liknande komponenter för "shows", "bookings", etc */}
     </div>

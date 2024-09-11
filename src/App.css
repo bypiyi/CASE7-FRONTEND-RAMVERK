@@ -30,6 +30,7 @@ body {
   z-index: 1000;
   position: fixed;
   top: 0;
+  
 }
 
 /* Loggan ovanför menyn */
@@ -46,6 +47,7 @@ body {
     justify-content: center; 
     padding: 0;
     margin: 0;
+    gap: 15px;
 }
 
 .nav-links a {
@@ -64,6 +66,7 @@ body {
 
 /* Movies Section */
 .movies-section {
+  margin-top: 300px;
   padding: 20px;
   background-color: #f9f9f9;
   text-align: center;
