@@ -1,32 +1,43 @@
 // src/App.js
-import React from 'react';
-import './app.css'; // Importera din CSS
-import heroImage from './assets/hero_banner.jpg';
-import logoImage from './assets/header_logo.png';
+import React, { useState } from 'react';
+import Movies from './components/Movies'; // Importera Movies-komponenten
+import './app.css';
+import logoImage from './assets/header_logo.jpg';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home'); // State för att hålla reda på vilken sida som visas
+
+  const handleNavigation = (page) => {
+    setCurrentPage(page); // Uppdatera state baserat på vilken länk som klickas
+  };
+
   return (
     <div className="App">
       <header className="navbar">
         <div className="logo">
-        <img src={logoImage} alt="Logo" className="logo-image" />
+          <img src={logoImage} alt="Logo" className="logo-image" />
         </div>
         <nav className="nav-links">
           <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about">MOVIES</a></li>
-            <li><a href="#services">SHOWS</a></li>
-            <li><a href="#contact">BOOKINGS</a></li>
-            <li><a href="#contact">ABOUT</a></li>
+            <li><a href="#" onClick={() => handleNavigation('home')}>HOME</a></li>
+            <li><a href="#" onClick={() => handleNavigation('movies')}>MOVIES</a></li>
+            <li><a href="#" onClick={() => handleNavigation('shows')}>SHOWS</a></li>
+            <li><a href="#" onClick={() => handleNavigation('bookings')}>BOOKINGS</a></li>
+            <li><a href="#" onClick={() => handleNavigation('about')}>ABOUT</a></li>
           </ul>
         </nav>
       </header>
 
-      <section className="hero">
-        <img src={heroImage} alt="Hero" className="hero-image" />
-      </section>
+      {/* Växla mellan sidorna baserat på currentPage state */}
+      {currentPage === 'home' && (
+        <div className="home">
+          {/* Här kan du lägga till innehållet för din hemsida */}
+        </div>
+      )}
 
-      {/* Här kan du lägga till resten av ditt innehåll */}
+      {currentPage === 'movies' && <Movies />} {/* Visar Movies-komponenten om sidan är 'movies' */}
+
+      {/* Du kan skapa liknande komponenter för "shows", "bookings", etc */}
     </div>
   );
 }
