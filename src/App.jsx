@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Movies from './components/Movies'; // Importera Movies-komponenten
 import './app.css';
+import Footer from './components/Footer';
 import logoImage from './assets/header_logo.jpg';
 
 function App() {
@@ -40,6 +41,10 @@ function App() {
       {currentPage === 'about' && <About />}
 
       {/* Du kan skapa liknande komponenter för "shows", "bookings", etc */}
+    
+      <Footer />
+    
+    
     </div>
   );
 }

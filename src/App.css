@@ -155,3 +155,54 @@ body {
 .btn:hover {
   opacity: 0.9; /* Lätt hover-effekt för alla knappar */
 }
+
+
+
+
+
+
+
+/* ---------------------- */
+/* Footer.css */
+.footer {
+  background-color: #000000; /* Bakgrundsfärg för footern */
+  color: #fff; /* Textfärg */
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  margin-top: 40px;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  margin-bottom: 15px;
+}
+
+.footer-logo-image {
+  width: 100px; /* Anpassa storlek på loggan */
+}
+
+.footer-nav {
+  margin-bottom: 15px;
+}
+
+.footer-link {
+  color: #ff9a00; /* Färg på länken */
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-contact {
+  font-size: 14px;
+}
