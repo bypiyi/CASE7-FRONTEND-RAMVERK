@@ -1,0 +1,29 @@
+/* Footer.css */
+.footer {
+    background-color: #000000; 
+    color: #ff9a00; 
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    letter-spacing: 2px;
+  }
+  
+  .footer-content {
+    margin-top: 40px;
+    height: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  .footer-nav {
+    margin-bottom: 5px;
+  }
+  
+  .footer-contact {
+    font-size: 14px;
+  }
+  

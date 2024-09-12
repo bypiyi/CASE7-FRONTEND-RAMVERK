@@ -1,9 +1,9 @@
 // src/App.js
 import React, { useState } from 'react';
-import Movies from './components/Movies';
-import BookingForm from './components/BookingForm';
+import Movies from './components/Movies/Movies';
+import BookingForm from './components/BookingForm/BookingForm';
 import './app.css';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 import logoImage from './assets/header_logo.jpg';
 
 function App() {
