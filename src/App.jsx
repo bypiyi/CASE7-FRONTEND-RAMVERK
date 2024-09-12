@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState } from 'react';
-import Movies from './components/Movies'; // Importera Movies-komponenten
+import Movies from './components/Movies';
+import BookingForm from './components/BookingForm';
 import './app.css';
 import Footer from './components/Footer';
 import logoImage from './assets/header_logo.jpg';
@@ -37,12 +38,12 @@ function App() {
 
       {currentPage === 'movies' && <Movies />}
       {currentPage === 'shows' && <Shows />}
-      {currentPage === 'bookings' && <Bookings />}
-      {currentPage === 'about' && <About />}
+      {currentPage === 'bookings' && <BookingForm />}
 
       {/* Du kan skapa liknande komponenter för "shows", "bookings", etc */}
     
-      <Footer />
+      {/* Gå till About-sidan */}
+      <Footer/>
     
     
     </div>
