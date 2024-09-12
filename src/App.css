@@ -17,6 +17,7 @@ body {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
+  overflow-x: hidden;
 }
 
 /* Navbar container */
@@ -26,18 +27,20 @@ body {
   flex-direction: column; 
   align-items: center;
   padding: 10px 0;
-  background-color: transparent;
+  background-color: black;
   z-index: 1000;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   
 }
 
 /* Loggan ovanför menyn */
 .logo-image {
-  width: 60px;
-  margin-top: 10px;
-  margin-bottom: 20px; 
+  width: 55px;
+  margin-top: 0px;
+  margin-bottom: 5px; 
 }
 
 /* Länkar vertikalt under loggan */
@@ -62,13 +65,19 @@ body {
   border-bottom: 3px solid;
 }
 
+
+
+
+
 /* ------------------------- */
 
 /* Movies Section */
+
+  
 .movies-section {
-  margin-top: 300px;
+  margin-top: 3550px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #000000;
   text-align: center;
 }
 
@@ -80,16 +89,69 @@ body {
 
 .movie-card {
   padding: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #4e4a4a;
+  margin-bottom: 20px;
 }
 
 .movie-card h3 {
-  font-size: 18px;
-  color: #5e17eb;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .movie-card p {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.movie-director {
+  font-size: 20px;;
+}
+
+.movie-poster {
+  margin-top: 10px;
+  width: 100%; 
+  height: auto;
+  max-height: 420px; 
+  object-fit: cover; 
+  border-radius: 0; 
+}
+
+/*  Buttons  */
+.button-group {
+  display: flex;
+  justify-content: center; 
+  margin-top: 10px; 
+  gap: 5px;
+  
+}
+
+.btn {
+  padding: 12px 15px;
+  width: 100%;
   font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px;
+  letter-spacing: 2px;
+}
+
+.btn-trailer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.btn-book {
+  background-color: #ff9a00; 
+  color: rgb(0, 0, 0);
+  border: 1px solid #ff9a00;
+}
+
+.btn:hover {
+  opacity: 0.9; /* Lätt hover-effekt för alla knappar */
 }
